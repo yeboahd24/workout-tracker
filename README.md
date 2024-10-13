@@ -1,5 +1,7 @@
 # Workout Tracker
 
+PROJECT_URL: `https://roadmap.sh/projects/fitness-workout-tracker`
+
 ## Introduction
 
 This is a simple workout tracker application built using Golang and PostgreSQL. It allows users to create, update, and delete workouts, as well as generate reports for their workouts. The application also includes JWT authentication for user sessions.
