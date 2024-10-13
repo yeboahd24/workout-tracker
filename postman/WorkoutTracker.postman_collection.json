@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "1781593d-7078-4651-85b2-322df0e89082",
+		"name": "WorkoutTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14925315"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"dominic\",\n    \"email\": \"dominic@gmail.com\",\n    \"password\": \"dominic\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"dominic\",\n    \"email\": \"dominic@gmail.com\",\n    \"password\": \"dominic\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 08 Oct 2024 18:10:19 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"User created successfully\"}\n"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"dominic\",\n    \"password\": \"dominic\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"dominic\",\n    \"password\": \"dominic\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 11:28:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "134"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDUzMzEsInVzZXJfaWQiOjJ9.JpbvOexnkFxjXlXBx5VqDPIHTX9a49eXfSFEV8GcmG0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "exercises",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Plank\",\n    \"category\": \"Core\",\n    \"description\": \"Begin in a pushup position, keeping your body in a straight line from head to heels. Hold the position for 30 seconds while engaging your core. This exercise strengthens the abdominal muscles and stabilizes the body.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exercises/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "exercises",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"JSquats\",\n    \"category\": \"Strength/Lower Body\",\n    \"description\": \"Stand with feet slightly wider than shoulder-width apart. Bend knees and push hips back as if sitting in a chair until thighs are parallel to the ground, then return to standing. Great for strengthening legs and core.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exercises/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exercises",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 10:22:49 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "364"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"id\":1,\"name\":\"Jumping Jacks\",\"description\":\"A beginner cardiovascular exercise performed by jumping with feet apart while raising arms overhead, then returning to the starting position. This exercise can be intensified by jumping higher or faster.\",\"category\":\"Cardio\",\"created_at\":\"2024-10-13T10:22:48.819216507Z\",\"updated_at\":\"2024-10-13T10:22:48.819216617Z\"}\n"
+				}
+			]
+		},
+		{
+			"name": "exercises",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exercises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "exercises",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exercises",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exercises"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 11:29:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "719"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Jumping Jacks\",\n        \"description\": \"A beginner cardiovascular exercise performed by jumping with feet apart while raising arms overhead, then returning to the starting position. This exercise can be intensified by jumping higher or faster.\",\n        \"category\": \"Cardio\",\n        \"created_at\": \"2024-10-13T10:22:48.819217Z\",\n        \"updated_at\": \"2024-10-13T10:22:48.819217Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Plank\",\n        \"description\": \"Begin in a pushup position, keeping your body in a straight line from head to heels. Hold the position for 30 seconds while engaging your core. This exercise strengthens the abdominal muscles and stabilizes the body.\",\n        \"category\": \"Core\",\n        \"created_at\": \"2024-10-13T10:30:21.77224Z\",\n        \"updated_at\": \"2024-10-13T10:30:21.77224Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "workout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"My Workout\",\n  \"description\": \"A great workout\",\n  \"scheduled_for\": \"2024-03-10T10:00:00Z\",\n  \"exercises\": [\n    {\n      \"exercise_id\": 1,\n      \"sets\": 3,\n      \"reps\": 10,\n      \"weight\": 60.0,\n      \"notes\": \"Focus on form\"\n    },\n    {\n      \"exercise_id\": 2,\n      \"sets\": 4,\n      \"reps\": 12,\n      \"weight\": 70.0,\n      \"notes\": \"Push yourself\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/workouts/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workouts",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "workouts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"My Workout\",\n  \"description\": \"A great workout\",\n  \"scheduled_for\": \"2024-03-10T10:00:00Z\",\n  \"exercises\": [\n    {\n      \"exercise_id\": 1,\n      \"sets\": 3,\n      \"reps\": 10,\n      \"weight\": 60.0,\n      \"notes\": \"Focus on form\"\n    },\n    {\n      \"exercise_id\": 2,\n      \"sets\": 4,\n      \"reps\": 12,\n      \"weight\": 70.0,\n      \"notes\": \"Push yourself\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/workouts/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workouts",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 10:32:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "408"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"id\":1,\"user_id\":2,\"name\":\"My Workout\",\"description\":\"A great workout\",\"scheduled_for\":\"2024-03-10T10:00:00Z\",\"exercises\":[{\"id\":0,\"workout_id\":0,\"exercise_id\":1,\"sets\":3,\"reps\":10,\"weight\":60,\"notes\":\"Focus on form\"},{\"id\":0,\"workout_id\":0,\"exercise_id\":2,\"sets\":4,\"reps\":12,\"weight\":70,\"notes\":\"Push yourself\"}],\"created_at\":\"2024-10-13T10:32:07.377399716Z\",\"updated_at\":\"2024-10-13T10:32:07.377399816Z\"}\n"
+				}
+			]
+		},
+		{
+			"name": "workouts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/workouts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workouts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "workouts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/workouts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workouts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 10:34:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "428"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"id\":1,\"user_id\":2,\"name\":\"My Workout\",\"description\":\"A great workout\",\"scheduled_for\":\"2024-03-10T10:00:00Z\",\"exercises\":null,\"created_at\":\"2024-10-13T10:32:07.3774Z\",\"updated_at\":\"2024-10-13T10:32:07.3774Z\"},{\"id\":2,\"user_id\":2,\"name\":\"My Workout\",\"description\":\"A great workout\",\"scheduled_for\":\"2024-03-10T10:00:00Z\",\"exercises\":null,\"created_at\":\"2024-10-13T10:33:58.264407Z\",\"updated_at\":\"2024-10-13T10:33:58.264407Z\"}]\n"
+				}
+			]
+		},
+		{
+			"name": "workouts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"name\": \"Updated Workout Routine\",\n  \"description\": \"A more intense version of the previous workout\",\n  \"scheduled_for\": \"2024-10-20T10:00:00Z\",\n  \"exercises\": [\n    {\n      \"exercise_id\": 1,\n      \"sets\": 4,\n      \"reps\": 12,\n      \"weight\": 60.5,\n      \"notes\": \"Increase weight if too easy\"\n    },\n    {\n      \"exercise_id\": 2,\n      \"sets\": 3,\n      \"reps\": 15,\n      \"weight\": 40.0,\n      \"notes\": \"Focus on form\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/workouts/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workouts",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "workouts",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"name\": \"Updated Workout Routine\",\n  \"description\": \"A more intense version of the previous workout\",\n  \"scheduled_for\": \"2024-10-20T10:00:00Z\",\n  \"exercises\": [\n    {\n      \"exercise_id\": 1,\n      \"sets\": 4,\n      \"reps\": 12,\n      \"weight\": 60.5,\n      \"notes\": \"Increase weight if too easy\"\n    },\n    {\n      \"exercise_id\": 2,\n      \"sets\": 3,\n      \"reps\": 15,\n      \"weight\": 40.0,\n      \"notes\": \"Focus on form\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/workouts/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workouts",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 10:58:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "458"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"id\":1,\"user_id\":2,\"name\":\"Updated Workout Routine\",\"description\":\"A more intense version of the previous workout\",\"scheduled_for\":\"2024-10-20T10:00:00Z\",\"exercises\":[{\"id\":0,\"workout_id\":0,\"exercise_id\":1,\"sets\":4,\"reps\":12,\"weight\":60.5,\"notes\":\"Increase weight if too easy\"},{\"id\":0,\"workout_id\":0,\"exercise_id\":2,\"sets\":3,\"reps\":15,\"weight\":40,\"notes\":\"Focus on form\"}],\"created_at\":\"2024-10-13T10:32:07.3774Z\",\"updated_at\":\"2024-10-13T10:32:07.3774Z\"}\n"
+				}
+			]
+		},
+		{
+			"name": "workout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/workouts/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workouts",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "workout",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/workouts/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workouts",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 11:11:38 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mjg5MDEzMzgsInVzZXJfaWQiOjJ9.nFmEBtzCUQYeq5DxhEY8LUUeCm5F53DKC1iMVHR3Vdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/workouts/report?start_date=2024-03-01&end_date=2024-10-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"workouts",
+						"report"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2024-03-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2024-10-31"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/workouts/report?start_date=2024-10-01&end_date=2024-10-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workouts",
+								"report"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-10-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-10-31"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 11:23:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"end_date\": \"2024-10-31\",\n    \"start_date\": \"2024-10-01\",\n    \"total_exercises\": 0,\n    \"total_workouts\": 0,\n    \"workouts\": {}\n}"
+				},
+				{
+					"name": "reports",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/workouts/report?start_date=2024-03-01&end_date=2024-10-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"workouts",
+								"report"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-03-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-10-31"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Oct 2024 11:24:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "281"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"end_date\": \"2024-10-31\",\n    \"start_date\": \"2024-03-01\",\n    \"total_exercises\": 2,\n    \"total_workouts\": 1,\n    \"workouts\": {\n        \"2\": {\n            \"exercises\": [\n                {\n                    \"exercise_id\": 1,\n                    \"reps\": 10,\n                    \"sets\": 3,\n                    \"weight\": 60\n                },\n                {\n                    \"exercise_id\": 2,\n                    \"reps\": 12,\n                    \"sets\": 4,\n                    \"weight\": 70\n                }\n            ],\n            \"name\": \"My Workout\",\n            \"scheduled_for\": \"2024-03-10T10:00:00Z\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
